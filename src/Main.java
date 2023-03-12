@@ -45,8 +45,21 @@ public class Main {
     }
     public static void task3() {
         System.out.println("Задача 3.");
+        int[] arrForAverage = generateRandomArray();
+        double sumMonthExpenses = 0;
+        for (int dailyExpenses : arrForAverage) {
+            sumMonthExpenses += dailyExpenses;
         }
+        double averageDailyExpenses = sumMonthExpenses / arrForAverage.length;
+        System.out.printf("Средняя сумма трат за месяц составила " + "%.2f", averageDailyExpenses);
+        System.out.println(" рублей.");
+    }
     public static void task4() {
         System.out.println("Задача 4.");
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length-1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
+        System.out.println();
     }
 }
